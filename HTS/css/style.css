@@ -6,7 +6,7 @@ header {
     height: 360px;
 }
 
-header .headercontainer {
+header  .headercontainer{
     height: 100px;
     width: 100%;
     background-color: #70cdf4;
@@ -138,7 +138,7 @@ main {
 .container10 {
 background-color: #70cdf4;
 height: 500px;
-    width: 750px;
+    width: 500px;
     border-radius: 25px;
 
 
@@ -148,7 +148,7 @@ height: 500px;
     display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	align-content: center;
 }
@@ -156,10 +156,18 @@ height: 500px;
 .container10 form ul li {
     font-size: xx-large;
     display: flex;
-	flex-direction: column;
+
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
     margin-top: 10px;
+}
+.superduper{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
+    height: 100%;
+  
 }
