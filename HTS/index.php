@@ -29,7 +29,8 @@ session_start();
               </div>
             </div>
               <img src="./img/vakantie.jpg" alt=""background>
-      </header>
+            <a href="./flights.html">flights</a>  
+            </header>
 
     <main>
         <div class="bar">
