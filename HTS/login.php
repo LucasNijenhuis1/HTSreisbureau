@@ -60,7 +60,7 @@
           </form>
 
         <a href="./includes/logout.php">logout</a>
-        <a href="./forgot.html">forgot password</a>
+        <a href="./forgot.php">forgot password</a>
         </div>
     </div>
         
