@@ -44,6 +44,8 @@
                 </ul>
               </form>
             </div>
+
+            
         
         <div class="container10">
            
@@ -58,6 +60,7 @@
           </form>
 
         <a href="./includes/logout.php">logout</a>
+        <a href="./forgot.php">forgot password</a>
         </div>
     </div>
         

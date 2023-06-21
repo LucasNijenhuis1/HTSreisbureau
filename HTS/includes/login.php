@@ -1,5 +1,6 @@
 <?php
 require_once 'conn.php';
+
 $data = [
     'email' => $_POST['email'],
     'password' => $_POST['password'],
