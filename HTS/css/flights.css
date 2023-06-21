@@ -3,7 +3,8 @@
 }
 
 header {
-    height: 360px;
+    display: flex;
+    flex-direction: column;
 }
 
 header  .headercontainer{
@@ -40,23 +41,27 @@ header img {
 
 .bar {
     background-color: #70cdf4;
+    color: #0b4c68;
     width: 100%;
     height: 250px;
     display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: space-evenly;
-	align-items: center;
-	align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
-form ul { list-style-type: circle; }
+form ul { list-style-type: circle;
+display: flex; }
+
 
 form ul li { display: inline-block }
 
 input {
-    border-radius: 25px;
+    border-radius: 10px;
     border: #be3144;
+    height: 20px;
+    box-shadow: 2px 2px 10px;
 }
 
 label {
@@ -70,4 +75,183 @@ main {
     color: #FFFFFF;
     height: 700px;
     background-repeat: no-repeat;
+    display: flex;
+}
+
+.block{
+    background-color: #65c5ee;
+    width: 200px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    box-shadow: 5px 7px 16px black;
+}
+
+.textzoek{
+    font-size: 30px;
+    width: 150px;
+    height: 40px;
+}
+.selectbar{
+    background-color: green;
+    width: 400px;
+    height: 1000px;
+    margin-left: 100px;
+}
+.reisbar{
+background-color: lime;
+width: 1010px;
+height: 1000px;
+margin-right: 200px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.card{
+    background-color: white;
+    width: 1000px;
+    height: 350px;
+    margin: 5px;
+    display: flex;
+}
+.card-looks{
+ width: 800px;
+ height: 100%;
+ 
+}
+.card-imgcontainer{
+    width: 100%;
+    height: 200px;
+   
+    display: flex;
+  
+    justify-content: space-between;
+}
+.card-img{
+width: 49.5%;
+height: 100%;
+}
+.card-ratingbalk{
+    width: 100%;
+    height: 150px;
+    
+    display: flex;
+    align-items: end;
+}
+.card-rating{
+    height: 85px;
+    width: 85px;
+    background-color: #0b4c68;
+    justify-self: center;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+}
+
+.rating-text{
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-family: fantasy;
+}
+.card-info{
+    width: 350px    ;
+    height: 100%;
+   
+    display: flex;
+    flex-direction: column;
+    
+}
+.card-balk{
+   background-color: gray;
+    border-radius: 10px;
+    width: 100%;
+    height: 1px;
+    opacity: 0.9;
+    margin: 1px;
+}
+.card-datebalk{
+    background-color: rgb(223, 223, 223);
+width: 1000%;
+height: 50px;
+color: black;
+font-family: math;
+font-size: 20px;
+}
+.card-airportbalk{
+
+width: 300px;
+
+}
+.card-planes{
+    background-color: rgb(223, 223, 223);
+    width: 100%;
+    height: 47px;
+    color: black;
+    font-size: 25px;
+    font-family: math;
+}
+
+
+.icon{
+    color: #0b4c68;
+    width: 50px;
+    height: 50px;
+    scale: 0.8;
+}
+.card-first-layer{
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+.card-second-layer{
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+.card-bookingbuton{
+    background-color: yellow;
+    width: 100px;
+    height: 70px;
+    color: black;
+    
+    margin-bottom: 20px;
+    margin-left: 100px;
+    border-radius: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+.card-third-layer{
+    width: 350px;
+    height: 50px;
+    display: flex;
+}
+.card-allinclusive-balk{
+    height: 50px;
+    width: 300px;
+    color: black;
+    background-color: rgb(223, 223, 223);
+    font-size: 25px;
+    font-family: math;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-fourth-layer{
+    width: 350px;
+    height: 50px;
+    color: red;
+   
+font-size: 40px;
+font-family: fantasy;
 }
