@@ -54,7 +54,13 @@ $reizen = $stmt->fetch();
                         </div>
                         <div class="poepie">
                             <div class="kaka">
-                              
+                            <?php if (isset( $_SESSION['user_roll']) &&  $_SESSION['user_roll'] <11){?> 
+                            <form action="./includes/addbooking.php" method="POST">
+                            <input type="hidden"  value="<?php echo $_GET["reis_id"] ?>" name="reis_id">
+                            <input type="hidden"  value="<?php echo $_SESSION['user_id'] ?>" name="user_id">
+                            <input type="submit" placeholder="Book" value="book" name="book">
+                        </form>
+                        <?php  }?>
                             </div>
                             <div class="kaka">
                                 <i class="fa-solid fa-location-dot fa-2x"></i>

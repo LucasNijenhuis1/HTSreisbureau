@@ -43,7 +43,7 @@ session_start();
        
         <div class="hogrider">
 <a class="vakantiebox3" href="flights.php">Flights</a>
-<a class="vakantiebox3" href="">Youre Orders</a>
+<a class="vakantiebox3" href="my_orderspage.php">Your Orders</a>
 <a class="vakantiebox3" href="">HTS Garanties en Verzekeringen</a>
 
                     
