@@ -1,5 +1,7 @@
 * {
     margin: 0px;
+    font-family: math;
+    text-decoration: none;
 }
 
 header {
@@ -96,13 +98,13 @@ main {
     height: 40px;
 }
 .selectbar{
-    background-color: green;
+
     width: 400px;
     height: 1000px;
     margin-left: 100px;
 }
 .reisbar{
-background-color: lime;
+
 width: 1010px;
 height: 1000px;
 margin-right: 200px;
@@ -111,7 +113,7 @@ flex-direction: column;
 align-items: center;
 }
 .card{
-    background-color: white;
+    background-color: #65c5ee;
     width: 1000px;
     height: 350px;
     margin: 5px;
@@ -182,7 +184,7 @@ height: 100%;
 width: 1000%;
 height: 50px;
 color: black;
-font-family: math;
+
 font-size: 20px;
 }
 .card-airportbalk{
@@ -196,7 +198,7 @@ width: 300px;
     height: 47px;
     color: black;
     font-size: 25px;
-    font-family: math;
+   
 }
 
 
@@ -229,7 +231,7 @@ width: 300px;
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    font-family: sans-serif;
+    
 }
 .card-third-layer{
     width: 350px;
@@ -253,5 +255,5 @@ width: 300px;
     color: red;
    
 font-size: 40px;
-font-family: fantasy;
+
 }

@@ -79,17 +79,21 @@ margin-top: 10px;
 	align-content: center;
 }
 
-.flexrow {
+.flexplanes {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: start;
     align-items: start;
 }
 
-.flexrow h1 {
+.flexplanes h1 {
     line-height: 10px;
     font-size: larger;
     margin-left: 5px;
+}
+.planes{
+    display: flex;
+    
 }
 .flexcol {
     display: flex;
@@ -113,7 +117,7 @@ hr {
 .ratingbox {
     height: 50px;
     width: 320;
-    background-color: green;
+    background-color: #0b4c68;
     border-radius: 25px;
     text-align: center;
     line-height: 10px;
@@ -140,4 +144,9 @@ hr {
 
 .kaka h1 {
     font-size: larger;
+}
+.fa-solid{
+font-weight: 900;
+    color: black;
+    text-decoration: none;
 }

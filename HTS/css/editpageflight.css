@@ -1,0 +1,21 @@
+
+
+.formbalk{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-content: center;
+    font-size: 45px;
+    margin: 5px;
+}
+header{
+    height: 100px;
+}
+.form-box{
+    background-color: #70cdf4;
+    height:100%;
+        width: 1000px;
+        border-radius: 25px;   
+        margin-top: 50px; 
+}

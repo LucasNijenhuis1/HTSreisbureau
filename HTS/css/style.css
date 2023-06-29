@@ -13,7 +13,7 @@ header  .headercontainer{
     display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: space-between;
+	
 	align-items: center;
 	align-content: center;
 }
@@ -127,6 +127,12 @@ main h1 {
     background-color: #70cdf4;
     border-radius: 50px;
     margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
 }
 
 main {
@@ -165,9 +171,9 @@ height: 500px;
 }
 .superduper{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: end;
     align-items: center;
-    width: 300px;
+    width: 100%;
     height: 100%;
   
 }

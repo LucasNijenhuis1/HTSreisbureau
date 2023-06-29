@@ -13,18 +13,27 @@
 </head>
 
 <body>
-    <header>
+<header>
         <div class="headercontainer">
             <a href="index.php"><img src="../HTS/img/image-removebg-preview (1).png" alt=""></a>
-            <?php 
-            if (isset($_SESSION['voornaam'])){
-                echo "welcome ". $_SESSION['voornaam'];
-            }
-            ?>
-            <a href="login.php"><i class="fa-solid fa-user"></i></a>
+          
+           <?php if (isset( $_SESSION['user_roll']) &&  $_SESSION['user_roll'] <3){?>
+            <a href="adminpage.php"> <i class="fa-sharp fa-solid fa-toolbox "></i></a>
+                              <?php  }?>
            
-        </div>
-    </header>
+           
+        
+            <div class="superduper">
+           <?php 
+           if (isset($_SESSION['voornaam'])){
+                echo "welcome ". $_SESSION['voornaam'];
+            } ?>
+            <a href="login.php"><i class="fa-solid fa-user"></i></a>
+              </div>
+            </div>
+              <img src="./img/vakantie.jpg" alt=""background>
+           
+            </header>
 
     <main>
         <div class="main2">

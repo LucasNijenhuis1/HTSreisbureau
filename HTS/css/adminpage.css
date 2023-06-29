@@ -1,0 +1,44 @@
+*{
+    background-color: #3d3d68;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    
+}
+body{
+    display: flex;
+}
+.pagesbalk{
+    background-color: #2e2e52;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+.textbox{
+height: 100%;
+width: 100%;
+
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+text-decoration: none;
+font-size: 200px;
+}
+.textbalk{
+    height: 100px;
+    width: 100%;
+    background-color: #2e2e52;
+   font-size: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   text-decoration: none;
+}
+.whitebar{
+    background-color: white;
+    height: 2px;
+    width: 100%;
+}
+

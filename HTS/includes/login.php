@@ -19,7 +19,7 @@ if ($user) {
     $_SESSION['achternaam'] = $user['achternaam'];
     $_SESSION['user_email'] = $user['email'];
     $_SESSION['password'] = $user['password'];
-    
+    $_SESSION['user_roll'] = $user['roll'];
     header('location: ../index.php');
 } else {
     header('location: ../login.php');

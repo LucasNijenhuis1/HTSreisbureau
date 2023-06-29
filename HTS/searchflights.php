@@ -1,8 +1,12 @@
 <?php
+
+
 session_start();
-require_once './includes/conn.php';
+
+
+$con = mysqli_connect('localhost','root','','htsreisbureau');
 $sql = "SELECT * FROM reizen";
-$all_reizen = $conn->query($sql);
+$all_reizen = $con->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -16,16 +20,9 @@ $all_reizen = $conn->query($sql);
     <title>Document</title>
 </head>
 <body>
-<header>
+    <header>
         <div class="headercontainer">
             <a href="index.php"><img src="../HTS/img/image-removebg-preview (1).png" alt=""></a>
-          
-           <?php if (isset( $_SESSION['user_roll']) &&  $_SESSION['user_roll'] <3){?>
-            <a href="adminpage.php"> <i class="fa-sharp fa-solid fa-toolbox "></i></a>
-                              <?php  }?>
-           
-           
-        
             <div class="superduper">
            <?php 
            if (isset($_SESSION['voornaam'])){
@@ -35,16 +32,36 @@ $all_reizen = $conn->query($sql);
               </div>
             </div>
               <img src="./img/vakantie.jpg" alt=""background>
-           
-            </header>
+              <div class="bar">
+                <h1>Zoek een vakantie!</h1>
+                <form action="searchflights.php" method="GET"> 
+                    <ul>
+                        <div class="block"><li><label>land:</label><br></li>
+                        <li><input type="text" id="land" name="land" value=""><br></li></div>
+                       
+                       <div class="block"> <li><label>Datum:</label><br></li>
+                        <li><input type="text" id="datum" name="datum" value=""><br></li></div>
+                        <div class="block"> <li><input name="submit" type="submit" class="textzoek" value="zoeken"></li></div>
+                    </ul>
+                  </form>
+             
+             
+      </header>
       <main>
-       
-        <div class="selectbar"></div>
+      <div class="selectbar"></div>
         <div class="reisbar">
-        <?php
-        $count;
-        foreach ($all_reizen as $row) {
-        ?>
+      <?php 
+              if (isset($_GET['submit'])){
+                $naam = $_GET['land'];
+                $datum = $_GET['datum'];
+                $sql = "SELECT * FROM reizen WHERE reis_land LIKE '%$naam%' OR reis_datum = '%$datum%'";
+               
+                $exe = mysqli_query($con,$sql)or die("Query failled !!"); 
+            if (mysqli_num_rows($exe) > 0){
+              while ($row = mysqli_fetch_assoc($exe)){ 
+?>
+              
+        
           <div class="card">
             <div class="card-looks">
             <div class="card-imgcontainer">
@@ -85,11 +102,9 @@ $all_reizen = $conn->query($sql);
        
         <div class="card-fourth-layer"><?php echo $row["reis_prijs"];?>,-*</div>
           </div>
+          <?php }}} ?>
           </div>
-          <?php
-        }
-        ?>
-       
+          
         </div>
         </main>
 </body>

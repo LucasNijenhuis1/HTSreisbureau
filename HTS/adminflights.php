@@ -3,6 +3,9 @@ session_start();
 require_once './includes/conn.php';
 $sql = "SELECT * FROM reizen";
 $all_reizen = $conn->query($sql);
+if (isset($_SESSION["user_roll"])  && $_SESSION['user_roll'] > 3) {
+  header('location:index.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +16,7 @@ $all_reizen = $conn->query($sql);
     <meta name="viewport" content="width=, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/2a59e6fa2d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/flights.css">
+    <link rel="stylesheet" href="./css/adminflight.css">
     <title>Document</title>
 </head>
 <body>
@@ -52,11 +56,14 @@ $all_reizen = $conn->query($sql);
               <img class="card-img" src="<?php echo $row["reis_img2"]; ?>" alt="">
             </div>
             <div class="card-ratingbalk">
-              <div class="card-rating">
-<div class="rating-text"><?php echo $row["reis_rating"]; ?>/10</div>
+              <div class="card-edit">
+<?php echo "<a class='edit-text' href='./editpageflight.php?reis_id=" . $row['reis_id'] . "'>edit</a>";?>
             </div>
-            <div class="card-bookingbuton"><?php echo "<a href='./flightinfo.php?reis_id=" . $row['reis_id'] . "'>Book</a>";?></div>
+           
+           <?php
             
+              echo "<a class='card-deletebuton' href='./includes/deleteflight.php?reis_id=" . $row['reis_id'] . "'>delete</a>";
+        ?>
           </div>
           </div>
           <div class="card-info">

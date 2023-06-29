@@ -1,3 +1,14 @@
+<?php 
+session_start();
+require_once './includes/conn.php';
+
+if(isset($_SESSION["user_roll"])  && $_SESSION['user_roll'] >3){
+header('location:index.php');
+}
+$sql="SELECT * FROM users";
+$all_users = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../HTS/css/style.css">
+    <link rel="stylesheet" href="../HTS/css/user.css">
     <script src="https://kit.fontawesome.com/1630483488.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,25 +43,48 @@
             <a href="login.php"><i class="fa-solid fa-user"></i></a>
               </div>
             </div>
-              <img src="./img/vakantie.jpg" alt=""background>
-           
+            
             </header>
 
     <main>
-        
         <div class="main2">
-            <div class="container10">
-                <form>
-                    <ul>
-                        <li><label>Forgot password</label><br></li>
-                        <li><label for="email">email</label><br></li>
-                        <li><input type="text" placeholder="Example@gmail.com" name="email" value=""><br></li>
-                        <li><input type="submit" value="submit"></li>
-                    </ul>
-                </form>
-                <a href="./login.php">already have a account?</a>
-            </div>
-        </div>
+            <div class="form-box">
+        <div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>email</th>
+            <th>voornaam</th>
+            <th>password</th>
+            <th>roll</th>
+            <th>delete</th>
+            <th>Edit</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <?php
+  foreach($all_users as $row){
+  ?>
+            <td><?php echo $row["id"];?></td>
+            <td><?php echo $row["email"];?></td>
+            <td><?php echo $row["voornaam"];?></td>
+            <td><?php echo $row["password"];?></td>
+            <td><?php echo $row["roll"];?></td>
+            <td><?php echo "<a href='./includes/deleteuser.php?id=" . $row['id'] . "'>Fire</a>"?></td>
+            <td><?php echo "<a href='./edituserpage.php?id=" . $row['id'] . "'>Edit</a>"?></td>
+        </tr>
+        <?php
+        }
+        ?>
+        <tbody>
+    </table>
+    </div>
+</div>
+            
+        
+       
         
     </main>
 
